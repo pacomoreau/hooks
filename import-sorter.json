@@ -1,0 +1,16 @@
+{
+  "autoFormat": "onSave",
+  "quoteMark": "double",
+  "emptyLinesBetweenGroups": 0,
+  "maxLineLength": 120,
+  "removeLastIndexInPath": true,
+  "removeLastSlashInPath": true,
+  "wrappingStyle": "prettier",
+  "keepUnused": [".*"],
+  "groupRules": [
+    { "flags": "named", "regex": "^react" },
+    { "flags": "named", "regex": "^prop-types" },
+    { "flags": "named" },
+    { "flags": "scripts" }
+  ]
+}

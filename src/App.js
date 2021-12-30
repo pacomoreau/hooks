@@ -1,42 +1,41 @@
-import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import React from "react"
+import { Route, Routes } from "react-router-dom"
+import { ChakraProvider, Flex, HStack, theme } from "@chakra-ui/react"
+import { ColorModeSwitcher, Link } from "components"
+import { ClassComponent, FunctionComponent, Home, UseState } from "pages"
 
-function App() {
+const App = () => {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
+      <Flex direction="column" textAlign="center" fontSize="xl" minH="100vh" p={5}>
+        <Flex justifyContent="space-between" w="100%">
+          <HStack spacing={8}>
+            <Link to="/" fontSize="xl">
+              Home
             </Link>
-          </VStack>
-        </Grid>
-      </Box>
+            <Link to="/class-component" fontSize="xl">
+              ClassComponent
+            </Link>
+            <Link to="/function-component" fontSize="xl">
+              FunctionComponent
+            </Link>
+            <Link to="/use-state" fontSize="xl">
+              useState
+            </Link>
+          </HStack>
+          <ColorModeSwitcher justifySelf="flex-end" />
+        </Flex>
+        <Flex direction="column" justifyContent="center" h="100%" p={5} flexGrow="1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="class-component" element={<ClassComponent />} />
+            <Route path="function-component" element={<FunctionComponent />} />
+            <Route path="use-state" element={<UseState />} />
+          </Routes>
+        </Flex>
+      </Flex>
     </ChakraProvider>
-  );
+  )
 }
 
-export default App;
+export default App
