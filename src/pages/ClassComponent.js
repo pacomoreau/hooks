@@ -1,5 +1,6 @@
 import { Component } from "react"
 import { Heading, Text, VStack } from "@chakra-ui/react"
+import { Log } from "components"
 
 export class ClassComponent extends Component {
   constructor(props) {
@@ -31,11 +32,13 @@ export class ClassComponent extends Component {
     const { prop1, prop2 } = this.props
 
     return (
-      <VStack>
-        <Heading>Je suis un composant classe !</Heading>
-        <Text>J'ai un constructeur, des méthodes de cycle de vie et la possibilité d'avoir un state.</Text>
-        <Text textDecoration="underline">Je ne peux pas utiliser de hooks.</Text>
-      </VStack>
+      <Log name="ClassComponent">
+        <VStack>
+          <Heading>Je suis un composant classe !</Heading>
+          <Text>J'ai un constructeur, des méthodes de cycle de vie et la possibilité d'avoir un state.</Text>
+          <Text textDecoration="underline">Je ne peux pas utiliser de hooks.</Text>
+        </VStack>
+      </Log>
     )
   }
 }

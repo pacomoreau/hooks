@@ -1,9 +1,10 @@
-import { useLogRender } from "hooks"
+import { Text } from "@chakra-ui/react"
+import { Log } from "components"
 
 export const Home = () => {
-  useLogRender("Home")
-  
   return (
-    <>Home</>
+    <Log name="Home">
+      <Text fontSize="2xl">React Hooks !</Text>
+    </Log>
   )
 }
