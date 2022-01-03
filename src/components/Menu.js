@@ -25,6 +25,9 @@ export const Menu = () => (
       <Link to="/use-memo" fontSize="xl">
         useMemo
       </Link>
+      <Link to="/memo" fontSize="xl">
+        Memo
+      </Link>
     </HStack>
     <ColorModeSwitcher justifySelf="flex-end" />
   </Flex>

@@ -1,6 +1,7 @@
 export * from "./ClassComponent"
 export * from "./FunctionComponent"
 export * from "./Home"
+export * from "./Memo"
 export * from "./UseEffect"
 export * from "./UseMemo"
 export * from "./UseRef"

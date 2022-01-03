@@ -37,7 +37,8 @@ export const UseMemo = () => {
   }, [category])
 
   // exemple de warning si category n'est pas dans un useMemo :
-  // The 'category' object makes the dependencies of useEffect Hook (at line 37) change on every render. Move it inside the useEffect callback. Alternatively, wrap the initialization of 'category' in its own useMemo() Hook
+  // The 'category' object makes the dependencies of useEffect Hook (at line 37) change on every render.
+  // Move it inside the useEffect callback. Alternatively, wrap the initialization of 'category' in its own useMemo() Hook
 
   const inc = () => setCount((prevCount) => prevCount + 1)
   const dec = () => setCount((prevCount) => prevCount - 1)
