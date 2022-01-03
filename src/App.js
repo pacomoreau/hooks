@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import { ChakraProvider, Flex, Input, theme } from "@chakra-ui/react"
 import { Log, Menu } from "components"
-import { ClassComponent, FunctionComponent, Home, UseEffect, UseRef, UseState } from "pages"
+import { ClassComponent, FunctionComponent, Home, UseEffect, UseMemo, UseRef, UseState } from "pages"
 
 const App = () => {
   const [value, setValue] = useState("")
@@ -22,6 +22,7 @@ const App = () => {
               <Route path="use-state" element={<UseState />} />
               <Route path="use-ref" element={<UseRef />} />
               <Route path="use-effect" element={<UseEffect parentValue={value} />} />
+              <Route path="use-memo" element={<UseMemo />} />
             </Routes>
             <Menu />
           </Flex>

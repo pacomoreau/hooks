@@ -1,4 +1,4 @@
-import { Flex, HStack, Input } from "@chakra-ui/react"
+import { Flex, HStack } from "@chakra-ui/react"
 import { ColorModeSwitcher, Link } from "components"
 
 export const Menu = () => (
@@ -21,6 +21,9 @@ export const Menu = () => (
       </Link>
       <Link to="/use-effect" fontSize="xl">
         useEffect
+      </Link>
+      <Link to="/use-memo" fontSize="xl">
+        useMemo
       </Link>
     </HStack>
     <ColorModeSwitcher justifySelf="flex-end" />
