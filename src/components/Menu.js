@@ -8,13 +8,16 @@ export const Menu = () => (
         Home
       </Link>
       <Link to="/class-component" fontSize="xl">
-        ClassComponent
+        Class
       </Link>
       <Link to="/function-component" fontSize="xl">
-        FunctionComponent
+        Function
       </Link>
       <Link to="/use-state" fontSize="xl">
         useState
+      </Link>
+      <Link to="/use-ref" fontSize="xl">
+        useRef
       </Link>
     </HStack>
     <ColorModeSwitcher justifySelf="flex-end" />
