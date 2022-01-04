@@ -13,6 +13,9 @@ export const Menu = () => (
       <Link to="/function-component" fontSize="xl">
         function
       </Link>
+      <Link to="/ca-marche" fontSize="xl">
+        marche?
+      </Link>
       <Link to="/use-state" fontSize="xl">
         useState
       </Link>
@@ -26,7 +29,10 @@ export const Menu = () => (
         useMemo
       </Link>
       <Link to="/memo" fontSize="xl">
-        Memo
+        memo
+      </Link>
+      <Link to="/use-callback" fontSize="xl">
+        useCallback
       </Link>
     </HStack>
     <ColorModeSwitcher justifySelf="flex-end" />

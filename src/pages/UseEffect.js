@@ -10,15 +10,18 @@ export const UseEffect = ({ parentValue = "" }) => {
   const dec = () => setCount((prevCount) => prevCount - 1)
 
   useEffect(() => {
+    // synchronisé avec rien
     console.log("Dépendances vides : je vais m'exécute qu'une seule fois")
   }, [])
 
   useEffect(() => {
+    // synchronisé avec tout
     console.log("Dépendances absentes : je vais m'exécuter à chaque render")
   })
 
   useEffect(() => {
     // on rentrera toujours au moins une fois dans le useEffect
+    // synchronisé avec parentValue
     console.log("Dépendance sur parentValue : je vais m'exécuter à chaque fois que parentValue change")
   }, [parentValue])
 

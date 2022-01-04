@@ -44,7 +44,7 @@ export const UseMemo = () => {
   const dec = () => setCount((prevCount) => prevCount - 1)
 
   return (
-    <Log name="UseMemo">
+    <Log name="UseMemo" desc="Plus subtil :)">
       <Flex justifyContent="center" alignItems="center">
         <Button m={3} fontSize="4xl" onClick={dec}>
           -
